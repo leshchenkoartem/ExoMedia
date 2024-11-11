@@ -21,10 +21,7 @@ import android.content.Context;
 import android.graphics.SurfaceTexture;
 import android.net.Uri;
 import android.os.Build;
-import android.support.annotation.FloatRange;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.*;
 import android.util.AttributeSet;
 import android.view.Surface;
 

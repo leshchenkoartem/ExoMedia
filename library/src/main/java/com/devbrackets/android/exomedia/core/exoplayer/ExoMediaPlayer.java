@@ -24,11 +24,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.os.PowerManager;
-import android.support.annotation.FloatRange;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.Size;
-import android.support.v4.util.ArrayMap;
+import androidx.annotation.*;
 import android.util.Log;
 import android.view.Surface;
 
@@ -58,7 +54,6 @@ import com.google.android.exoplayer2.analytics.AnalyticsListener;
 import com.google.android.exoplayer2.audio.AudioAttributes;
 import com.google.android.exoplayer2.audio.AudioRendererEventListener;
 import com.google.android.exoplayer2.decoder.DecoderCounters;
-import com.google.android.exoplayer2.drm.DefaultDrmSessionEventListener;
 import com.google.android.exoplayer2.drm.DefaultDrmSessionManager;
 import com.google.android.exoplayer2.drm.DrmSessionManager;
 import com.google.android.exoplayer2.drm.ExoMediaDrm;
@@ -160,7 +155,7 @@ public class ExoMediaPlayer extends Player.DefaultEventListener {
 
         ComponentListener componentListener = new ComponentListener();
         RendererProvider rendererProvider = new RendererProvider(context, mainHandler, componentListener, componentListener, componentListener, componentListener);
-        DrmSessionManager<FrameworkMediaCrypto> drmSessionManager = generateDrmSessionManager();
+        DrmSessionManager drmSessionManager = generateDrmSessionManager();
         rendererProvider.setDrmSessionManager(drmSessionManager);
 
         renderers = rendererProvider.generate();

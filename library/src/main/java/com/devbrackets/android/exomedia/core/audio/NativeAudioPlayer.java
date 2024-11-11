@@ -21,10 +21,7 @@ import android.media.MediaPlayer;
 import android.media.PlaybackParams;
 import android.net.Uri;
 import android.os.Build;
-import android.support.annotation.FloatRange;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.*;
 import android.util.Log;
 
 import com.devbrackets.android.exomedia.ExoMedia;

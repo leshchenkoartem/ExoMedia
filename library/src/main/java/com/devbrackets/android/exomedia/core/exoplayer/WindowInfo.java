@@ -16,7 +16,7 @@
 
 package com.devbrackets.android.exomedia.core.exoplayer;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.*;
 
 import com.google.android.exoplayer2.Timeline;
 

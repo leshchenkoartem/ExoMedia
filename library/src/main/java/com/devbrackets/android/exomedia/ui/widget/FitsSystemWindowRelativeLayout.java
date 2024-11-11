@@ -21,10 +21,11 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.os.Build;
-import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.WindowInsets;
 import android.widget.RelativeLayout;
+
+import androidx.annotation.NonNull;
 
 /**
  * A RelativeLayout that will abide by the fitsSystemWindows flag without

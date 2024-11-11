@@ -21,11 +21,8 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Handler;
-import android.support.annotation.ColorRes;
-import android.support.annotation.IntRange;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.*;
+
 import android.util.AttributeSet;
 import android.util.SparseBooleanArray;
 import android.view.View;
@@ -34,6 +31,8 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import com.devbrackets.android.exomedia.R;
 import com.devbrackets.android.exomedia.listener.VideoControlsButtonListener;

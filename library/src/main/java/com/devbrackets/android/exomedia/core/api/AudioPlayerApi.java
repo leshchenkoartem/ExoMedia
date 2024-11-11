@@ -19,10 +19,8 @@ package com.devbrackets.android.exomedia.core.api;
 import android.content.Context;
 import android.media.AudioManager;
 import android.net.Uri;
-import android.support.annotation.FloatRange;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.*;
 
 import com.devbrackets.android.exomedia.ExoMedia;
 import com.devbrackets.android.exomedia.core.ListenerMux;

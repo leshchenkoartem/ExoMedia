@@ -28,9 +28,11 @@ dependencies {
     api "com.google.android.exoplayer:exoplayer-dash:$rootProject.ext.exoPlayerVersion"
     api "com.google.android.exoplayer:exoplayer-hls:$rootProject.ext.exoPlayerVersion"
     api "com.google.android.exoplayer:exoplayer-smoothstreaming:$rootProject.ext.exoPlayerVersion"
+    implementation 'androidx.annotation:annotation-jvm:1.9.1'
 }
 
 android {
+    namespace "com.devbrackets.android.exomedia"
     compileSdkVersion 28
 
     defaultConfig {
@@ -51,6 +53,10 @@ android {
     lintOptions {
         abortOnError false
     }
+
 }
+
+
+
 
 apply from: 'gradle/publish.gradle'
