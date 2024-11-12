@@ -26,11 +26,11 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 27
+        targetSdkVersion 33
 
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
