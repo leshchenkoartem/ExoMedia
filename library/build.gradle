@@ -2,13 +2,7 @@ apply plugin: 'com.android.library'
 //apply plugin: 'maven'
 //apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'maven-publish'
-publishing {
-    publications {
-        mavenRelease(MavenPublication) {
-            from components.release
-        }
-    }
-}
+
 def versionMajor = 4
 def versionMinor = 2
 def versionPatch = 3
@@ -51,6 +45,16 @@ android {
 
     lintOptions {
         abortOnError false
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            mavenRelease(MavenPublication) {
+                from components.release
+            }
+        }
     }
 }
 
