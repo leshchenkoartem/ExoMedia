@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'maven'
 //apply plugin: 'com.novoda.bintray-release'
-apply plugin: 'maven-publish'
+//apply plugin: 'maven-publish'
 
 def versionMajor = 4
 def versionMinor = 2
@@ -48,19 +48,19 @@ android {
     }
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                from components.release
-                groupId = libraryGroupId
-                artifactId = libraryBaseName
-                version = libraryVersion
-            }
-        }
-    }
-}
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            // Creates a Maven publication called "release".
+//            release(MavenPublication) {
+//                from components.release
+//                groupId = libraryGroupId
+//                artifactId = libraryBaseName
+//                version = libraryVersion
+//            }
+//        }
+//    }
+//}
 
 //afterEvaluate {
 //    publishing {
