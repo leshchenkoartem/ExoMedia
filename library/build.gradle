@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven'
-apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.novoda.bintray-release'
 
 def versionMajor = 4
 def versionMinor = 2
@@ -20,7 +20,7 @@ dependencies {
     api "com.google.android.exoplayer:exoplayer-hls:$rootProject.ext.exoPlayerVersion"
     api "com.google.android.exoplayer:exoplayer-smoothstreaming:$rootProject.ext.exoPlayerVersion"
 
-    api 'com.github.novoda:bintray-release:0.8.1'
+//    api 'com.github.novoda:bintray-release:0.8.1'
 
 }
 
@@ -48,28 +48,28 @@ android {
 }
 
 // ======== MAVEN DEPLOY to local cache or nexus repo (to make accessible to local projects) (command: ./gradlew clean aRel uploadArchives) ========
-uploadArchives {
-    repositories {
-        // deploy to local
-        mavenDeployer {
-            repository (url: "file://${System.env.HOME}/.m2/repository/")
-            pom.groupId = libraryGroupId
-            pom.artifactId = libraryBaseName
-            pom.version = libraryVersion //Normally I would append "-SNAPSHOT" but newer gradle/maven can't always find them
-            pom.packaging = 'aar'
-            uniqueVersion = false // don't put in a timestamp on the filename (other project will not be able to depend on it)
-        }
-    }
-}
-
-// ======= BINTRAY DEPLOY (command: $ ./gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false) ====
-publish {
-    userOrg = ""
-    groupId = libraryGroupId
-    artifactId = libraryBaseName
-    uploadName = 'ExoMedia'
-    publishVersion = libraryVersion
-    desc = ""
-    autoPublish = false
-    dryRun = false
-}
+//uploadArchives {
+//    repositories {
+//        // deploy to local
+//        mavenDeployer {
+//            repository (url: "file://${System.env.HOME}/.m2/repository/")
+//            pom.groupId = libraryGroupId
+//            pom.artifactId = libraryBaseName
+//            pom.version = libraryVersion //Normally I would append "-SNAPSHOT" but newer gradle/maven can't always find them
+//            pom.packaging = 'aar'
+//            uniqueVersion = false // don't put in a timestamp on the filename (other project will not be able to depend on it)
+//        }
+//    }
+//}
+//
+//// ======= BINTRAY DEPLOY (command: $ ./gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false) ====
+//publish {
+//    userOrg = ""
+//    groupId = libraryGroupId
+//    artifactId = libraryBaseName
+//    uploadName = 'ExoMedia'
+//    publishVersion = libraryVersion
+//    desc = ""
+//    autoPublish = false
+//    dryRun = false
+//}
