@@ -3,6 +3,7 @@ buildscript {
         jcenter()
         google()
         maven { url 'https://jitpack.io' }
+        mavenCentral()
 
     }
     dependencies {
@@ -20,6 +21,7 @@ allprojects {
         jcenter()
         google()
         maven { url 'https://jitpack.io' }
+        mavenCentral()
 
     }
 }
@@ -27,4 +29,8 @@ allprojects {
 ext {
     exoPlayerVersion = "2.8.1"
     supportLibVersion = "27.1.1"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
