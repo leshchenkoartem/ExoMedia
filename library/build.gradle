@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+
 //apply plugin: 'maven'
 //apply plugin: 'com.novoda.bintray-release'
 
@@ -13,6 +14,7 @@ def libraryVersion = "${versionMajor}.${versionMinor}.${versionPatch}"
 dependencies {
     implementation "com.android.support:support-media-compat:$rootProject.ext.supportLibVersion"
     implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibVersion"
+    classpath "org.gradle:gradle-maven-plugin:2.1"
 
     // ExoPlayer
     api "com.google.android.exoplayer:exoplayer-core:$rootProject.ext.exoPlayerVersion"
