@@ -15,8 +15,8 @@ buildscript {
 apply plugin: 'maven-publish'
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            from components.java
+        mavenRelease(MavenPublication) {
+            from components.release
         }
     }
 }
